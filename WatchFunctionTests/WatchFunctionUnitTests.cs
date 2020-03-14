@@ -13,7 +13,6 @@ namespace WatchFunctionTests
         [Fact]
         public void TestWatchFunctionSuccess()
         {
-            var httpContext = new DefaultHttpContext();
             var queryStringValue = "abc";
             var request = new DefaultHttpRequest(new DefaultHttpContext())
             {
@@ -44,7 +43,6 @@ namespace WatchFunctionTests
         [Fact]
         public void TestWatchFunctionFailureNoQueryString()
         {
-            var httpContext = new DefaultHttpContext();
             var request = new DefaultHttpRequest(new DefaultHttpContext());
             var logger = NullLoggerFactory.Instance.CreateLogger("Null Logger");
 
@@ -62,7 +60,6 @@ namespace WatchFunctionTests
         [Fact]
         public void TestWatchFunctionFailureNoModel()
         {
-            var httpContext = new DefaultHttpContext();
             var queryStringValue = "abc";
             var request = new DefaultHttpRequest(new DefaultHttpContext())
             {
